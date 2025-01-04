@@ -1,0 +1,284 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f5;
+    height: 100vh;
+}
+.planner {
+    width: 90%;
+    max-width: 800px;
+    background: #d1e7eb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: linear-gradient(135deg, #f89054, #f1cb77);
+}
+
+.planner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.date-section {
+    margin-bottom: 20px;
+}
+.date-section label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+.date-section input[type="date"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.checkboxes {
+    margin-top: 10px;
+}
+.checkboxes label {
+    margin: 0 10px;
+}
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.column {
+    width: 48%;
+    text-align: center;
+}
+.column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+textarea {
+    width: 500px;
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    text-align: center;
+}
+
+.priority-section {
+margin-top: 20px;
+}
+
+.priority-item {
+margin-bottom: 15px;
+}
+
+.priority-item input[type="text"] {
+width: 300px; /* Adjust width */
+height: 25px; /* Adjust height */
+padding: 3px;
+font-size: 14px; /* Text size */
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.priority-item input[type="checkbox"] {
+margin-right: 10px;
+}
+.todo-item {
+    margin: 10px 0;
+}
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+.todo-item input[type="text"] {
+    padding: 5px;
+    width: 300px;
+    font-size: 14px;
+    height: 20px;
+}
+.prayer-container {
+    display: flex;
+    justify-content: space-between;
+}
+.prayer-column {
+    display: flex;
+    flex-direction: column;
+}
+.prayer-row {
+    display: flex;
+ justify-content: space-between;
+ gap: 10px; /* Space between items */
+} 
+.prayer-item {
+    margin: 10px 0;
+}
+.prayer-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+.prayer-item label {
+    font-size: 16px;
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.schedule-table th, .schedule-table td {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.schedule-table th {
+    background-color: #f4f4f4;
+}
+.schedule-table input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.schedule-table input[type="checkbox"] {
+    margin: auto;
+    display: block;
+}
+.time-column {
+    width: 10%; /* Set smaller width for time column */
+}
+.activity-column {
+    width: 80%; /* Set larger width for activity column */
+}
+.done-column {
+    width: 10%; /* Adjust width for done column */
+    text-align: center;
+}
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+} 
+.glasses {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.glasses img {
+    width: 25px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.glasses img:hover {
+    transform: scale(1.1);
+}
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.items img {
+    width: 50px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.items img:hover {
+    transform: scale(1.1);
+}
+.food-section {
+margin-top: 20px; /* Add space between sections */
+}
+
+.food-table {
+display: flex;
+flex-direction: column;
+gap: 15px; /* Space between food items */
+}
+
+.food-item {
+display: flex;
+align-items: center;
+gap: 10px; /* Space between checkbox, label, and input */
+
+}
+
+.label {
+font-weight: bold;
+}
+
+.input {
+flex: 1; /* Make the input field expand to fill available space */
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 4px;
+height: 20px;
+width: 30px;
+}
+.section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.section textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+.notes-section {
+margin-top: 20px;
+}
+.notes-section label {
+font-size: 16px;
+color: #333;
+display: block;
+margin-bottom: 5px;
+}
+.notes-section textarea {
+width: 80%;
+height: 120px;
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: none;
+}
