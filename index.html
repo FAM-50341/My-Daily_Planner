@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+</head>
+<body>
+    <div class="planner">
+        <!-- Title -->
+        <h1>Daily Planner</h1>
+
+        <!-- Date and Day Selection -->
+        <section class="date-section">
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+            </div>
+            <div class="checkboxes">
+                <label><input type="checkbox"> Sat</label>
+                <label><input type="checkbox"> Sun</label>
+                <label><input type="checkbox"> Mon</label>
+                <label><input type="checkbox"> Tues</label>
+                <label><input type="checkbox"> Wed</label>
+                <label><input type="checkbox"> Thus</label>
+                <label><input type="checkbox"> Fri</label>
+            </div>
+        </section>
+        <!--<div class="container">-->
+            <h1>Today's Focus</h1>
+            <textarea placeholder="Write your focus for today here..."></textarea>
+            <!--<button>Save</button>-->
+       <!-- </div>-->
+             <!-- Two Columns Section -->
+             <div class="columns">
+                <!-- First Column -->
+                <div class="column">
+                    <div class="priority-section">
+                        <h2>Priority</h2>
+                        <div class="priority-item">
+                          <input type="checkbox" id="priority1" name="priority1">
+                          <label for="priority1"></label>
+                          <input type="text" id="priority1Text" name="priority1Text" placeholder="Enter your task">
+                        </div>
+                        <div class="priority-item">
+                          <input type="checkbox" id="priority2" name="priority2">
+                          <label for="priority2"></label>
+                          <input type="text" id="priority2Text" name="priority2Text" placeholder="Enter your task">
+                        </div>
+                        <div class="priority-item">
+                          <input type="checkbox" id="priority3" name="priority3">
+                          <label for="priority3"></label>
+                          <input type="text" id="priority3Text" name="priority3Text" placeholder="Enter your task">
+                        </div>
+                      </div>
+                      <form>
+                        <div class="todo-item">
+                            <h2>To-Do List</h2>
+                            <input type="checkbox" id="task1">
+                            <input type="text" id="task1-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task2">
+                            <input type="text" id="task2-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task3">
+                            <input type="text" id="task3-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task4">
+                            <input type="text" id="task4-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task5">
+                            <input type="text" id="task5-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task6">
+                            <input type="text" id="task6-text" placeholder="Enter task...">
+                        </div>
+                    </form>
+                    <div class="prayer-container">
+                        <h2>Prayer</h2>
+                        <!-- First Column (3 Rows) -->
+                        <br>
+                        <div class="prayer-column">
+                            <div class="prayer-row">
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="fajr">
+                                    <label for="fajr">Fajr</label>
+                                </div>
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="zuhr">
+                                    <label for="zuhr">Zuhr</label>
+                                </div>
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="asr">
+                                    <label for="asr">Asr</label>
+                                </div>
+                            </div>
+                            <div class="prayer-row">
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="maghrib">
+                                    <label for="maghrib">Maghrib</label>
+                                </div>
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="isha">
+                                    <label for="isha">Isha</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second Column -->
+                <div class="column">
+                    <div class="section">
+                        <h2>Schedule</h2>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Activity</th>
+                                    <th>Done</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Enter time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Enter time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Enter time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Enter time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Enter time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 6 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Enter time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <div class="section-title">Water</div>
+                        <div class="glasses">
+                            <!-- Glasses will be dynamically created here -->
+                        </div>
+                    </div>    
+                        </div>
+                    </div>
+                    <!--<div class="container">-->
+                    <div class="section-title">Food</div>
+                    <div class="food-table">
+                        <div class="food-item">
+                            <input type="checkbox" id="breakfast-checkbox">
+                            <label for="breakfast-checkbox" class="label">Breakfast</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    
+                        <div class="food-item">
+                            <input type="checkbox" id="lunch-checkbox">
+                            <label for="lunch-checkbox" class="label">Lunch</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    
+                        <div class="food-item">
+                            <input type="checkbox" id="snacks-checkbox">
+                            <label for="snacks-checkbox" class="label">Snacks</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    
+                        <div class="food-item">
+                            <input type="checkbox" id="dinner-checkbox">
+                            <label for="dinner-checkbox" class="label">Dinner</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    </div>
+        
+                    <div class="notes-section">
+                        <!--<label for="thoughts">Thoughts, Reflection & Notes:</label>-->
+                        <div class="section-title">Thoughts, Reflection & Notes</div>
+                        
+                        <textarea id="thoughts" placeholder="Write your thoughts, reflections, and notes here..."></textarea>
+                    </div>
+                    <br>
+                    <h1><b><i>"Your Vision Our Drive, Together We Thrive"</i></b></h1>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    </div>
+</body>
+</html>
