@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f5;
+            height: 100vh;
+        }
+        .planner {
+            width: 90%;
+            max-width: 800px;
+            background: #d1e7eb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background: linear-gradient(135deg, #f89054, #f1cb77);
+        }
+        
+        .planner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .date-section {
+            margin-bottom: 20px;
+        }
+        .date-section label {
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .date-section input[type="date"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkboxes {
+            margin-top: 10px;
+        }
+        .checkboxes label {
+            margin: 0 10px;
+        }
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .column {
+            width: 48%;
+            text-align: center;
+        }
+        .column h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+        textarea {
+            width: 500px;
+            height: 60px;
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+            text-align: center;
+        }
+     
+    .priority-section {
+    margin-top: 20px;
+  }
+
+  .priority-item {
+    margin-bottom: 15px;
+  }
+
+  .priority-item input[type="text"] {
+    width: 300px; /* Adjust width */
+    height: 25px; /* Adjust height */
+    padding: 3px;
+    font-size: 14px; /* Text size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .priority-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  .todo-item {
+            margin: 10px 0;
+        }
+        .todo-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .todo-item input[type="text"] {
+            padding: 5px;
+            width: 300px;
+            font-size: 14px;
+            height: 20px;
+        }
+        .prayer-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .prayer-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .prayer-row {
+            display: flex;
+         justify-content: space-between;
+         gap: 10px; /* Space between items */
+    } 
+        .prayer-item {
+            margin: 10px 0;
+        }
+        .prayer-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .prayer-item label {
+            font-size: 16px;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 2px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .schedule-table th {
+            background-color: #f4f4f4;
+        }
+        .schedule-table input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .schedule-table input[type="checkbox"] {
+            margin: auto;
+            display: block;
+        }
+        .time-column {
+            width: 10%; /* Set smaller width for time column */
+        }
+        .activity-column {
+            width: 80%; /* Set larger width for activity column */
+        }
+        .done-column {
+            width: 10%; /* Adjust width for done column */
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        } 
+        .glasses {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .glasses img {
+            width: 25px;
+            height: 35px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .glasses img:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .items img {
+            width: 50px;
+            height: 80px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .items img:hover {
+            transform: scale(1.1);
+        }
+        .food-section {
+    margin-top: 20px; /* Add space between sections */
+}
+
+.food-table {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between food items */
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox, label, and input */
+    
+}
+
+.label {
+    font-weight: bold;
+}
+
+.input {
+    flex: 1; /* Make the input field expand to fill available space */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 20px;
+    width: 30px;
+}
+        .section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .section textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        .notes-section {
+        margin-top: 20px;
+    }
+    .notes-section label {
+        font-size: 16px;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .notes-section textarea {
+        width: 80%;
+        height: 120px;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: none;
+    }
+        
+    </style>
+    </style>
+</head>
+<body>
+    <div class="planner">
+        <!-- Title -->
+        <h1>Daily Planner</h1>
+
+        <!-- Date and Day Selection -->
+        <section class="date-section">
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+            </div>
+            <div class="checkboxes">
+                <label><input type="checkbox"> Sat</label>
+                <label><input type="checkbox"> Sun</label>
+                <label><input type="checkbox"> Mon</label>
+                <label><input type="checkbox"> Tues</label>
+                <label><input type="checkbox"> Wed</label>
+                <label><input type="checkbox"> Thus</label>
+                <label><input type="checkbox"> Fri</label>
+            </div>
+        </section>
+        <!--<div class="container">-->
+            <h1>Today's Focus</h1>
+            <textarea placeholder="Write your focus for today here..."></textarea>
+            <!--<button>Save</button>-->
+       <!-- </div>-->
+             <!-- Two Columns Section -->
+             <div class="columns">
+                <!-- First Column -->
+                <div class="column">
+                    <div class="priority-section">
+                        <h2>Priority</h2>
+                        <div class="priority-item">
+                          <input type="checkbox" id="priority1" name="priority1">
+                          <label for="priority1"></label>
+                          <input type="text" id="priority1Text" name="priority1Text" placeholder="Enter your task">
+                        </div>
+                        <div class="priority-item">
+                          <input type="checkbox" id="priority2" name="priority2">
+                          <label for="priority2"></label>
+                          <input type="text" id="priority2Text" name="priority2Text" placeholder="Enter your task">
+                        </div>
+                        <div class="priority-item">
+                          <input type="checkbox" id="priority3" name="priority3">
+                          <label for="priority3"></label>
+                          <input type="text" id="priority3Text" name="priority3Text" placeholder="Enter your task">
+                        </div>
+                      </div>
+                      <form>
+                        <div class="todo-item">
+                            <h2>To-Do List</h2>
+                            <input type="checkbox" id="task1">
+                            <input type="text" id="task1-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task2">
+                            <input type="text" id="task2-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task3">
+                            <input type="text" id="task3-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task4">
+                            <input type="text" id="task4-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task5">
+                            <input type="text" id="task5-text" placeholder="Enter task...">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task6">
+                            <input type="text" id="task6-text" placeholder="Enter task...">
+                        </div>
+                    </form>
+                    <div class="prayer-container">
+                        <h2>Prayer</h2>
+                        <!-- First Column (3 Rows) -->
+                        <br>
+                        <div class="prayer-column">
+                            <div class="prayer-row">
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="fajr">
+                                    <label for="fajr">Fajr</label>
+                                </div>
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="zuhr">
+                                    <label for="zuhr">Zuhr</label>
+                                </div>
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="asr">
+                                    <label for="asr">Asr</label>
+                                </div>
+                            </div>
+                            <div class="prayer-row">
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="maghrib">
+                                    <label for="maghrib">Maghrib</label>
+                                </div>
+                                <div class="prayer-item">
+                                    <input type="checkbox" id="isha">
+                                    <label for="isha">Isha</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second Column -->
+                <div class="column">
+                    <div class="section">
+                        <h2>Schedule</h2>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Activity</th>
+                                    <th>Done</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Row 6 -->
+                                <tr>
+                                    <td><input type="text" placeholder="Time (e.g., 6:00 PM)"></td>
+                                    <td><input type="text" placeholder="Enter activity"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <div class="section-title">Water</div>
+                        <div class="glasses">
+                            <!-- Glasses will be dynamically created here -->
+                        </div>
+                    </div>
+                    <script>
+                        // Get the glasses container
+                        const glassesContainer = document.querySelector('.glasses');
+                    
+                        // Glass images (empty and filled)
+                        const emptyGlassSrc = "/empty.png";
+                        const filledGlassSrc = "/filledupglass.png";
+                    
+                        // Create 8 glasses dynamically
+                        for (let i = 0; i < 8; i++) {
+                            const glass = document.createElement('img');
+                            glass.src = emptyGlassSrc;
+                            glass.alt = 'Empty Glass';
+                    
+                            // Add an ID to track the glass index
+                            glass.dataset.index = i;
+                    
+                            // Toggle fill on click
+                            glass.addEventListener('click', () => {
+                                // Check if glass is empty
+                                if (glass.src.includes(emptyGlassSrc)) {
+                                    // Fill the clicked glass
+                                    glass.src = filledGlassSrc;
+                    
+                                    // Fill all previous glasses
+                                    let prevGlass = glass.previousElementSibling;
+                                    while (prevGlass) {
+                                        prevGlass.src = filledGlassSrc;
+                                        prevGlass = prevGlass.previousElementSibling;
+                                    }
+                                } else {
+                                    // Empty the clicked glass and all subsequent glasses
+                                    glass.src = emptyGlassSrc;
+                                    let nextGlass = glass.nextElementSibling;
+                                    while (nextGlass) {
+                                        nextGlass.src = emptyGlassSrc;
+                                        nextGlass = nextGlass.nextElementSibling;
+                                    }
+                                }
+                            });
+                    
+                            glassesContainer.appendChild(glass);
+                        }
+                    </script>     
+                        </div>
+                    </div>
+                    <!--<div class="container">-->
+                    <div class="section-title">Food</div>
+                    <div class="food-table">
+                        <div class="food-item">
+                            <input type="checkbox" id="breakfast-checkbox">
+                            <label for="breakfast-checkbox" class="label">Breakfast</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    
+                        <div class="food-item">
+                            <input type="checkbox" id="lunch-checkbox">
+                            <label for="lunch-checkbox" class="label">Lunch</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    
+                        <div class="food-item">
+                            <input type="checkbox" id="snacks-checkbox">
+                            <label for="snacks-checkbox" class="label">Snacks</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    
+                        <div class="food-item">
+                            <input type="checkbox" id="dinner-checkbox">
+                            <label for="dinner-checkbox" class="label">Dinner</label>
+                            <input type="text" class="input" placeholder="Enter food items">
+                        </div>
+                    </div>
+        
+                    <div class="notes-section">
+                        <!--<label for="thoughts">Thoughts, Reflection & Notes:</label>-->
+                        <div class="section-title">Thoughts, Reflection & Notes</div>
+                        
+                        <textarea id="thoughts" placeholder="Write your thoughts, reflections, and notes here..."></textarea>
+                    </div>
+                    <br>
+                    <h1><b><i>"Your Vision Our Drive, Together We Thrive"</i></b></h1>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    </div>
+</body>
+</html>
